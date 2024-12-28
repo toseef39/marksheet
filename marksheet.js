@@ -1,16 +1,14 @@
 document.getElementById('marksForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const subject1 = parseInt(document.getElementById('subject1').value);
-    const subject2 = parseInt(document.getElementById('subject2').value);
-    const subject3 = parseInt(document.getElementById('subject3').value);
-    const subject4 = parseInt(document.getElementById('subject4').value);
-    const subject5 = parseInt(document.getElementById('subject5').value);
-
-    // Total marks calculation
-    const totalMarks = subject1 + subject2 + subject3 + subject4 + subject5;
-    const percentage = (totalMarks / 500) * 100;
+    let name = document.getElementById('name').value;
+    let subject1 = parseInt(document.getElementById('subject1').value);
+    let subject2 = parseInt(document.getElementById('subject2').value);
+    let subject3 = parseInt(document.getElementById('subject3').value);
+    let subject4 = parseInt(document.getElementById('subject4').value);
+    let subject5 = parseInt(document.getElementById('subject5').value);
+    let totalMarks = subject1 + subject2 + subject3 + subject4 + subject5;
+    let percentage = (totalMarks / 500) * 100;
 
     let grade = '';
     if (percentage >= 90) {
@@ -25,7 +23,7 @@ document.getElementById('marksForm').addEventListener('submit', function(event) 
         grade = 'F';
     }
     document.getElementById('studentName').textContent = name;
-    const marksTable = document.getElementById('marksTable');
+    let marksTable = document.getElementById('marksTable');
     marksTable.innerHTML = `
         <tr>
             <th>Subject</th>
@@ -41,6 +39,5 @@ document.getElementById('marksForm').addEventListener('submit', function(event) 
     document.getElementById('percentage').textContent = `Percentage: ${percentage.toFixed(2)}%`;
     document.getElementById('grade').textContent = `Grade: ${grade}`;
 
-    // Show marksheet
     document.getElementById('marksheet').style.display = 'block';
 });
