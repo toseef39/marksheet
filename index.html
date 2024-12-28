@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: blue;">
+    <div class="container">
+        <h1>Marksheet Generator</h1>
+        <form id="marksForm" class="col s12">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="subject1">English:</label>
+            <input type="number" id="subject1" required>
+
+            <label for="subject2">Chemistry:</label>
+            <input type="number" id="subject2" required>
+
+            <label for="subject3">Math:</label>
+            <input type="number" id="subject3" required>
+
+            <label for="subject4">Physics:</label>
+            <input type="number" id="subject4" required>
+
+            <label for="subject5">Urdu:</label>
+            <input type="number" id="subject5" required>
+
+            <button type="submit">Generate Marksheet</button>
+        </form>
+
+        <div id="marksheet" class="marksheet">
+            <h2>Marksheet</h2>
+            <p id="studentName"></p>
+            <table id="marksTable">
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks Obtained</th>
+                </tr>
+            </table>
+            <p id="totalMarks"></p>
+            <p id="percentage"></p>
+            <p id="grade"></p>
+        </div>
+    </div>
+
+    <script src="marksheet.js"></script>
+</body>
+</html>
